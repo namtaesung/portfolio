@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a{
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+        #wrap{
+            width: 90%;
+            margin: 0 auto; 
+        }
+        header{
+            background-color: rgb(71, 71, 71);
+            color: white;
+            display: flex;
+            height: 70px;
+            text-align: center;
+        }
+        .header_box1{
+            width: 30%;
+        }
+        .header_box1>h1{
+            padding-top: 10px;
+        }
+        .header_box2{
+            width: 70%;
+            font-weight: bold;
+        }
+        .header_box2>ul{
+            list-style: none;
+        }
+        .header_box2>ul>li{
+            display: inline-block;
+            padding: 20px 80px;
+        }
+        /* main start*/
+        main{
+            width: 100%;
+            margin: 50px auto;
+            display: flex;
+            
+            text-align: center;
+            justify-content: space-around;
+        }
+        main>section{
+            width: 45%;
+            background-color: aquamarine;
+            margin: 10px;
+            height: 700px;
+        }
+        #sec1{
+            display: flex;
+            overflow: hidden;
+        }
+        #sec1>ul{
+            width: 100%;
+            display: flex;
+            list-style: none;
+        }
+        #sec1>ul>li>img{
+            text-align: center;
+            width: 780px;
+        }
+        #sec2{
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        #sec2>ul{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            cursor: pointer;
+        }
+        #sec2>ul>li>img{
+            text-align: center;
+            width: 780px;
+        }
+        #btn1{
+            position: absolute;
+            left: 0;
+            top: 45%;
+        }
+        #btn2{
+            position: absolute;
+            right: 0;
+            top: 45%;
+        }
+        #pro{
+            width: 100%;
+        }
+        #bigimg{
+           position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+        #big{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%);
+            border: 5px salmon solid; 
+        }
+        #pro{
+            width: 95%;
+            background-color: aquamarine;
+            height: 400px;
+            margin: 20px auto;
+        }
+        footer{
+            display: flex;
+            justify-content: space-around;
+        }
+        footer>div{
+            width: 45%;
+            text-align: center;
+            background-color: rgb(71, 71, 71);
+            color: white;
+            line-height: 30px;
+        }
+        footer>div>h1{
+            padding: 10px;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_box1">
+                <h1>NAM-TAE-SUNG</h1>
+            </div>
+            <div class="header_box2">
+                <ul>
+                    <li><a href="index1.html">MAIN</a></li>
+                    <li>PORTFOLIO</li>
+                    <li>PROFILE</li>
+                </ul>
+            </div>
+        </header>
+        <main> 
+            <section id="sec1">
+                <ul id="kk">
+                    <li><img src="./images/img1.png" class="kkimg"></li>
+                    <li><img src="./images/img2.png" class="kkimg"></li>
+                    <li><img src="./images/img3.jpg" class="kkimg"></li>
+                </ul>
+            </section>
+            <section id="sec2">
+                <ul id="qq">
+                    <li><img src="./images/img1.png" class="qqimg"></li>
+                    <li><img src="./images/img2.png" class="qqimg"></li>
+                    <li><img src="./images/img3.jpg" class="qqimg"></li>
+                </ul>
+                <button id="btn1">왼쪽 </button>
+                <button id="btn2">오른쪽 </button>
+            </section>
+        </main>
+        <div id="bigimg">
+            <img src="./images/img2.png" id="big">
+          
+                       
+        </div>
+        <div id="pro">
+            
+        </div>
+        <footer>
+            <div>
+                <h1>EDUCATION</h1>
+                <p>2014~2017      한빛고등학교 졸업</p>
+                <p>2017~2019      서영대학교 졸업</p>
+                <p>2023      더조은컴퓨터학원 UI/UX 웹 퍼블리셔 과정</p>
+            </div>
+            <div>
+                <h1>Tel:010-7705-8618</h1>
+                <h1>E-Mail:skaqocjs@naver.com</h1>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        $(function(){
+            var n=0
+            var pos=0
+            
+            setInterval(function(){
+                if(n<2){n++}
+                else{n=0}
+               
+                pos = n*(-780)
+               $('#kk').animate({'margin-left':pos},500)
+                   },2000) 
+        })
+        var qqimg = document.querySelectorAll('#qq img')
+        var left = document.querySelector('#btn1');
+       var right = document.querySelector('#btn2');
+       var num=0; 
+       imgshow();
+
+function imgshow(){
+ for(let i=0;i<qqimg.length;i++){
+     qqimg[i].style.display='none';
+ }
+ qqimg[num].style.display='block';
+}
+
+left.onclick=function(){
+ if(num<=0){num=2}
+ else(num -= 1)
+ imgshow();
+}
+right.onclick=function(){
+ if(num>=2){num=0}
+ else(num += 1)
+ imgshow();
+}
+    var big = document.querySelector('#big')
+    var bigimg = document.querySelector('#bigimg')
+    var qqimg = document.querySelectorAll('#qq img')
+    
+    for (i=0; i<qqimg.length; i++) {
+        qqimg[i].addEventListener("click", showLightbox);
+      }
+
+      function showLightbox() {
+				var bb = this.getAttribute("src");
+				big.setAttribute("src", bb);  
+				bigimg.style.display = "block";  
+      }
+      
+      bigimg.onclick = function() {  
+				bigimg.style.display = "none";  
+      }
+    </script>
+
+</body>
+</html>

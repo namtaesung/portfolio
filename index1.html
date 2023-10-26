@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Gasoek+One&family=Lilita+One&family=Playpen+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        h1{font-family: 'Diphylleia', serif;
+font-family: 'Gasoek One', sans-serif;
+font-family: 'Lilita One', sans-serif;
+font-family: 'Playpen Sans', cursive;}
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap{
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+        border: 3px solid black;
+        }
+        #header-box1{
+            width: 40%;
+            font-size: 15px;
+            float: left;
+            text-align: left;
+        }
+        #header-box2{
+            width: 15%;
+            margin-left: 30px;
+            font-size: 12px;
+            float: right;
+            text-align: left;
+        }
+        #header-box2>ul>li>a{
+            color: black;
+            text-align: left;
+        }
+        #header-box2>ul>li:hover{
+            background-color: white;
+        }
+        #header-box3{
+            margin-left: -300px;
+            font-size: 12px;
+            clear: both;
+            background-color: black;
+        }
+        #header-box3>ul>li>a{
+            color: white;
+        }
+        #header-box3>ul>li:hover{
+            background-color: yellow;
+        }
+        #header-box3>ul>li:hover a{
+            color: black;
+        }
+        header>div>ul{
+            list-style: none;
+            
+        }
+        header>div>ul>li{
+            display: inline-block;
+            padding: 10px;
+            
+        }
+        header>div>h1{
+            margin-left: 250px;
+            padding-left: 50px;
+            
+        }
+        header>ul{
+            list-style: none;
+            
+        }
+        header>ul>li{
+            display: inline-block;
+            padding: 10px;
+        }
+        section{
+            width: 1400px;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+        }
+        .img_list{
+            width: 1400px;
+            height: 900px;
+            display: flex;
+            overflow: hidden;
+           
+            
+        }
+        .img_list>ul{
+            list-style: none;
+            display: flex;
+            
+            
+        }
+        .img_list>ul>li>img{
+            width: 1400px;
+            height: 900px;
+            border-radius: 10%;
+        }
+        
+        .img_box{
+            transition: 1s;
+            text-align: center;
+            font-size: 30px;
+            height: 900px;
+            line-height: 70px;
+            width: 1400px;
+            background-color: black;
+            position: absolute;
+            top: 900px;
+            left: 0;
+            opacity: 0;
+            color: white;
+            
+        }
+       section:hover .img_box{
+            top:0;
+            opacity: 0.5;
+            border-radius: 10%;
+        }
+
+        #fix{
+            position: fixed;
+            top: 30%;
+            right: -1.5%;
+        }
+        #fix>ul{
+            list-style: none;
+        }
+        #fix>ul>li{
+            margin: 30px;
+            background-color: black;
+            padding: 10px;
+            border-radius: 100%;
+            width: 80px;
+            height:80px;
+            text-align: center;
+            line-height: 55px;
+        }
+        #fix>ul>li>a{
+            color: white;
+            font-size: 12px;
+        }
+        #fix>ul>li:hover {
+            background-color: yellow;
+            color: black;
+        }
+        #fix>ul>li:hover a{
+            color: black;
+        }
+        footer{
+            width: 90%;
+            margin: 50px auto;
+            display: flex;
+            background-color: black;
+            color: white;
+            height: 50px;
+            text-align: center;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+        footer>ul{
+            list-style: none;
+            
+        }
+        footer>ul>li{
+            display: inline-block;
+            padding:  15px 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <div id="header-box1">
+            <h1>PET IN GARDEN</h1>
+        </div>    
+        <div id="header-box2">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">마이샵</a></li>
+            </ul>
+        </div>
+        <div id="header-box3">
+            <ul>
+                <li><a href="#">GARDEN 소개</a></li>
+                <li><a href="#">반려 동물</a></li>
+                <li><a href="#">용품 소개</a></li>
+                <li><a href="#">분양</a></li>
+                <li><a href="#">위치</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+                <div class="img_list">
+                    <ul id="s_img">
+                        <li><img src="./images/dog1-1.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog2.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog3.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog4.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog5.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog6-1.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog7.jpg" class="qqimg"></li>
+                        <li><img src="./images/dog8-1.jpg" class="qqimg"></li>
+                    </ul>
+                </div>
+                <div class="img_box">
+                    <p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                    </p>
+                </div>
+    </section>
+    <div id="fix">
+        <ul>
+            <li class="fix_ch"><a href="#">상담</a></li>
+            <li class="fix_ch"><a href="#">문의</a></li>
+            <li class="fix_ch"><a href="#">고객센터</a></li>
+            <li class="fix_ch"><a href="#">오시는길</a></li>
+        </ul>
+    </div>
+    <footer>
+            <ul>
+                <li>Tel:031-XXXX-XXXX</li>
+                <li>공지 사항</li>
+                <li>입금 계좌 : XXX-XXXX-XXXX-XXX</li>
+                <li><i class="fa-solid fa-truck-front"></i></li>
+                <li></li>
+            </ul>
+    </footer>
+    <script>
+        $(function(){
+            var n=0
+            var pos=0
+            
+            setInterval(function(){
+                if(n<6){n++}
+                else{n=0}
+               
+                pos = n*(-1400)
+               $('#s_img').animate({'margin-left':pos},500)
+                   },2000) 
+        })
+        var simg = document.querySelector('#s_img')
+        var qqimg = document.querySelectorAll('#s_img img')
+        var ibox = document.querySelectorAll('.img_list')
+       var num=0; 
+       imgshow();
+
+function imgshow(){
+ for(let i=0;i<2;i++){
+     qqimg[i].style.display='none';
+ }
+ qqimg[num].style.display='block';
+}
+    </script>
+</div>
+</body>
+</html>

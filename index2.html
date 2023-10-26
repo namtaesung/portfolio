@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap{
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+        border: 3px solid black;
+        background-image:url(imghouse.jpg);
+        background-size: cover;
+        }
+        header>div{
+            display: inline-block;
+        }
+        #header-box1{
+            width: 75%;
+            font-size: 40px;
+        }
+        #header-box2{
+            width: 15%;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+        #header-box2>ul>li>a{
+            color: black;
+        }
+        #header-box2>ul>li:hover{
+            background-color: white;
+        }
+        #header-box3{
+            margin: 30px;
+            font-size: 20px;
+        }
+        #header-box3>ul>li>a{
+            color: black;
+        }
+        #header-box3>ul>li:hover{
+            background-color: white;
+        }
+        header>div>ul{
+            list-style: none;
+            
+        }
+        header>div>ul>li{
+            display: inline-block;
+            padding: 10px;
+            
+        }
+        header>div>h1{
+            margin-left: 250px;
+            padding-left: 50px;
+            
+        }
+        header>ul{
+            list-style: none;
+            
+        }
+        header>ul>li{
+            display: inline-block;
+            padding: 10px;
+        }
+        section{
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        section>ul{
+            display: flex;
+            list-style: none;
+            flex-flow: wrap;
+            justify-content: space-around;
+
+        }
+        section>ul>li{
+            margin: 20px;
+            padding: 10px;
+            display: inline-block;
+            width: 350px;
+            height: 250px;
+            
+        }
+        section>ul>li>img{
+            width: 350px;
+            height: 250px;
+        }
+        .ibox{
+            width: 350px;
+            height: 250px;
+            display: flex;
+            overflow: hidden;
+        }
+        .ibox>img{
+            width: 350px;
+            height: 250px;
+        }
+        section>ul>li>.img_box{
+            transition: 1s;
+            text-align: center;
+            font-size: bold;
+            height: 250px;
+            opacity: 0;
+            line-height: 30px;
+            width: 350px;
+        }
+        section>ul>li:hover .img_box{
+            opacity: 0.7;
+            background-color: black;
+            color: white;
+            transform: translateY(-275px);
+        }
+        #fix{
+            position: fixed;
+            top: 30%;
+            right: 5%;
+        }
+        #fix>ul{
+            list-style: none;
+        }
+        #fix>ul>li{
+            margin: 30px;
+            background-color: black;
+            padding: 10px;
+            border-radius: 100%;
+            width: 100px;
+            height:100px;
+            text-align: center;
+            line-height: 80px;
+        }
+        #fix>ul>li>a{
+            color: white;
+        }
+        #fix>ul>li:hover {
+            background-color: yellow;
+            color: black;
+        }
+        #fix>ul>li:hover a{
+            color: black;
+        }
+        footer{
+            width: 90%;
+            margin: 50px auto;
+            display: flex;
+            border: 3px solid black;
+            height: 360px;
+        }
+        #foot_box1{
+            width: 45%;
+            height: 200px;
+            font-size: 20px;
+        }
+        #foot_box2{
+            width: 45%;
+            height: 200px;
+        }
+        #foot_box2>img{
+            width: 500px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <div id="header-box1">
+            <h1>PET IN GARDEN</h1>
+        </div>    
+        <div id="header-box2">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">마이샵</a></li>
+            </ul>
+        </div>
+        <div id="header-box3">
+            <ul>
+                <li><a href="#">GARDEN 소개</a></li>
+                <li><a href="#">반려 동물</a></li>
+                <li><a href="#">용품 소개</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <div class="ibox"><img src="dog1-1.jpg" class="qqimg">
+                <img src="dog1-2.jpg" class="qqimg"></div>
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+            </li>
+            <li><img src="dog2.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+            </li>
+            <li><img src="dog3.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+                </li>
+            <li><img src="dog4.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+                </li>
+            <li><img src="dog5.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+                </li>
+            <li>
+                <div class="ibox"><img src="dog6-1.jpg" class="qqimg">
+                <img src="dog6-2.jpg" class="qqimg"></div>
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+            </li>
+            <li><img src="dog7.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+                </li>
+            <li>
+                <div class="ibox"><img src="dog8-1.jpg" class="qqimg">
+                <img src="dog8-2.jpg" class="qqimg"></div>
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                출생:5개월<br>
+                성별:남아
+            </p></div>
+            </li>
+            <li><img src="dog9.jpg">
+                <p>강아지 분양/시베리안 허스키</p>
+                <div class="img_box"><p>분양가: 상담 요청<br>
+                    출생:5개월<br>
+                    성별:남아
+                </p></div>
+                </li>
+        </ul>
+    </section>
+    <div id="fix">
+        <ul>
+            <li class="fix_ch"><a href="#">상담</a></li>
+            <li class="fix_ch"><a href="#">문의</a></li>
+            <li class="fix_ch"><a href="#">고객센터</a></li>
+            <li class="fix_ch"><a href="#">오시는길</a></li>
+        </ul>
+    </div>
+    <footer>
+        <div id="foot_box1">
+            <ul>
+                <li>Tel:031-XXXX-XXXX</li>
+                <li>공지 사항</li>
+                <li><i class="fa-solid fa-truck-front"></i></li>
+                <li></li>
+            </ul>
+            
+            
+        </div>
+        <div id="foot_box2">
+            <img src="jj.jpg">
+        </div>
+    </footer>
+    <script>
+        $(function(){
+            var n=0
+            var pos=0
+            
+            setInterval(function(){
+                if(n<1){n++}
+                else{n=0}
+               
+                pos = n*(-180)
+               $('.qqimg').animate({'margin-left':pos},500)
+                   },2000) 
+        })
+        var qqimg = document.querySelectorAll('.qqimg')
+        var ibox = document.querySelectorAll('.ibox')
+       var num=0; 
+       imgshow();
+
+function imgshow(){
+ for(let i=0;i<1;i++){
+     qqimg[i].style.display='none';
+ }
+ qqimg[num].style.display='block';
+}
+    </script>
+</div>
+</body>
+</html>
